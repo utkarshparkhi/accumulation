@@ -8,7 +8,6 @@
 //! [bclms20]: https://eprint.iacr.org/2020/1618
 
 #![deny(
-    const_err,
     future_incompatible,
     missing_docs,
     non_shorthand_field_patterns,
