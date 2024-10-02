@@ -43,10 +43,8 @@ pub struct IndexProverKey<G: AffineCurve> {
     /// The `C` matrix of the R1CS instance.
     pub(crate) c: Matrix<G::ScalarField>,
 
-    /// The `D` matrix of the R1CS instance.
-
     /// Group elements required by the Pedersen commitment.
-    /// pub(crate) ck: CommitterKey<G>,
+    pub(crate) ck: CommitterKey<G>,
 }
 
 /// Index verifier key for our NARK.
@@ -107,7 +105,7 @@ pub struct FirstRoundMessage<G: AffineCurve> {
     /// Pedersen commitment to the `Bz` vector.
     pub(crate) comm_b: G,
 
-    /// Pedersen commitment to the `Cz` vector.
+    /// Pedersen commitment to the `Cz` vector. 
     pub(crate) comm_c: G,
 
     /// The randomness used for the commitment.
