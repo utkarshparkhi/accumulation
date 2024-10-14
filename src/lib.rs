@@ -47,6 +47,10 @@ pub mod error;
 #[cfg_attr(docsrs, doc(cfg(feature = "r1cs")))]
 pub mod constraints;
 
+///implementation of Bounded Depth Accumulation Scheme as in https://eprint.iacr.org/2024/474
+#[cfg(feature = "bd-as")]
+#[cfg_attr(docsrs, doc(cfg(feature = "r1cs")))]
+pub mod bd_as;
 /// An accumulation scheme for the Hadamard product relation.
 /// The construction is described in detail in [\[BCLMS20\]][bclms20].
 ///

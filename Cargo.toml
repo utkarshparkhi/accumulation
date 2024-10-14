@@ -41,7 +41,7 @@ tracing = { version = "0.1", default-features = false }
 tracing-subscriber = { version = "0.2", default-features = false, features = [ "registry" ] }
 
 [features]
-default = [ "r1cs", "std" ]
+default = [ "r1cs", "std", "bd-as","r1cs-nark-as" ]
 
 parallel = [ "std", "ark-ec/parallel", "ark-ff/parallel", "ark-poly/parallel",
              "ark-poly-commit/parallel", "ark-std/parallel", "rayon" ]
@@ -61,7 +61,7 @@ hp-as = [ "impl", "ark-poly" ]
 ipa-pc-as = [ "impl", "ark-poly", "ark-poly-commit", "blake2" ]
 r1cs-nark-as = [ "impl", "blake2", "digest", "hp-as", "r1cs" ]
 trivial-pc-as = [ "impl", "ark-poly", "ark-poly-commit", "blake2" ]
-
+bd-as = ["impl", "blake2", "digest", "hp-as", "r1cs"]
 [package.metadata.docs.rs]
 all-features = true
 rustdoc-args = ["--cfg", "docsrs"]
