@@ -61,10 +61,9 @@ where
 }
 
 #[derive(Clone, CanonicalSerialize, CanonicalDeserialize)]
-/// commitment to the full (input,witness) vec (Merkle root)
+/// commitment to the full [input||witness] vec (Merkle root)
 pub struct CommitmentFullAssignment<F: Field> {
     pub(crate) blinded_assignment: Vec<F>, // commitment to full assignment merkle root for tree
-                                           // with leaves = (input,witness)?
 }
 
 impl<F: Field> CommitmentFullAssignment<F> {

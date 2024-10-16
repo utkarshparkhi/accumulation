@@ -211,6 +211,10 @@ where
         // ));
         end_timer!(init_time);
         // a_equal & b_equal & c_equal & had_prod_equal
+        //
+        //
+        //
+        // add check to merkle root
         return had_prod == c_times_input_witness;
     }
 }
